@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Vineeth is a very busy person</title>
+  <style>
+    #output {
+      display: none; 
+    }
+  </style>
 </head>
 <body>
-
-  <button onclick="speak()">Click to Speak</button>
-
+  <div id="output"></div>
   <script>
-    function speak() {
-      const text = "I don't want to talk to you. You can hide and do whatever you want.";
-      const utterance = new SpeechSynthesisUtterance(text);
+    const output = document.getElementById('output');
+    const word = "I don't want to talk to you. You can hide and do whatever you want. ";
+    output.textContent = word;
+    window.onload = () => {
+      let utterance = new SpeechSynthesisUtterance(word);
       speechSynthesis.speak(utterance);
-    }
+    };
   </script>
 
 </body>
