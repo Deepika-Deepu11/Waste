@@ -3,23 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>Vineeth is a very busy person</title>
-  <style>
-    #output {
-      display: none; 
-    }
-  </style>
-</head>
-<body>
-  <div id="output"></div>
-  <script>
-    const output = document.getElementById('output');
-    const word = "I don't want to talk to you. You can hide and do whatever you want. ";
-    output.textContent = word;
-    window.onload = () => {
-      let utterance = new SpeechSynthesisUtterance(word);
-      speechSynthesis.speak(utterance);
-    };
-  </script>
+  <button onclick="speak()">Speak</button>
+<script>
+function speak() {
+  const utterance = new SpeechSynthesisUtterance("I don't want to talk to you. You can hide and do whatever you want.");
+  speechSynthesis.speak(utterance);
+}
+</script>
 
 </body>
 </html>
