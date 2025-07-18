@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>Vineeth is a very busy person</title>
-  <button onclick="speak()">Speak</button>
-<script>
-function speak() {
-  const utterance = new SpeechSynthesisUtterance("I don't want to talk to you. You can hide and do whatever you want.");
-  speechSynthesis.speak(utterance);
-}
-</script>
+</head>
+<body>
+
+  <button onclick="speak()">Click to Speak</button>
+
+  <script>
+    function speak() {
+      const text = "I don't want to talk to you. You can hide and do whatever you want.";
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    }
+  </script>
 
 </body>
 </html>
